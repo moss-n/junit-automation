@@ -20,13 +20,13 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar --select-class CarTest --reports-dir="reports"'
+                sh 'cd src/; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
             }
         }
 
         stage('Deploy'){
             steps{
-                sh 'java App.java' 
+                sh 'cd src/; java App.java' 
             }
         }
     }
