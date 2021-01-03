@@ -21,7 +21,6 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar --select-class CarTest --reports-dir="reports"'
-'
             }
         }
 
