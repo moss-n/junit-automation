@@ -13,6 +13,7 @@ pipeline {
             steps {
                 sh 'mkdir lib ; cd lib/'
                 sh 'wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
+                sh 'pwd'
                 sh 'cd ../src/'
                 sh 'javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" CarTest.java Car.java App.java'
             }
