@@ -26,7 +26,7 @@ pipeline {
 
         stage('Deploy'){
             steps{
-                sh 'cd src/; java App.java' 
+                sh 'cd src/; java App' 
             }
         }
     }
