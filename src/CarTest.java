@@ -1,17 +1,22 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import java.util.Random;
 
 public class CarTest {
 
     String make = "Honda"; 
     String model = "Civic"; 
+    String [] makeArr = [self.make,"wrong-make"]; 
     Car testCar = new Car(make, model); 
-    
+    Random rand = new Random(); 
+    int limit = 1;
+    int randomInt = rand.nextInt(limit);
+    String randomActual = makeArr[randomInt];  
 
     @Test
     public void testMake(){
         System.out.println("Running Test 1!");
-        Assertions.assertEquals(make, "HONDAA","Expected vehicle make did not match actual vehicle make"); 
+        Assertions.assertEquals(make, randomActual,"Expected vehicle make did not match actual vehicle make"); 
     }
 
     @Test 
