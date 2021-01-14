@@ -6,10 +6,10 @@ public class CarTest {
 
     String make = "Honda"; 
     String model = "Civic"; 
-    String [] makeArr = [self.make,"wrong-make"]; 
+    String[] makeArr = {make,"wrong-make"}; 
     Car testCar = new Car(make, model); 
     Random rand = new Random(); 
-    int limit = 1;
+    int limit = 2;
     int randomInt = rand.nextInt(limit);
     String randomActual = makeArr[randomInt];  
 
