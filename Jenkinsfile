@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout Codebase'){
             steps{
                 cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
+                checkout scm: [$class: 'GitSCM', branches: [[name: '*/influxdb-integration']],userRemoteConfigs:
                 [[credentialsId: 'github-ssh-key', url: 'git@github.com:mnorm88/junit-automation.git']]]
             }
         }
